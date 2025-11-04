@@ -1,0 +1,18 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 1.439625
+tiers? <exists>
+size = 1
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "IPA"
+		xmin = 0.0
+		xmax = 1.439625
+		intervals: size = 1
+		intervals [1]:
+			xmin = 0.0
+			xmax = 1.439625
+			text = "ki"

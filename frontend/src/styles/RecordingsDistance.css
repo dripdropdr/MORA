@@ -1,0 +1,43 @@
+/* Distance information styles - Add this to recording.css */
+
+.distance-info {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    cursor: help;
+}
+
+.distance-info:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.distance-excellent {
+    color: #2E7D32;
+    background: #E8F5E8;
+    border-color: #4CAF50;
+}
+
+.distance-good {
+    color: #8BC34A;
+    background: #FFF3E0;
+    border-color: #91c556;
+}
+
+.distance-fair {
+    color: #E65100;
+    background: #FFF3E0;
+    border-color: #FF5722;
+}
+
+.distance-poor {
+    color: #C62828;
+    background: #FFEBEE;
+    border-color: #F44336;
+}
+
+
+

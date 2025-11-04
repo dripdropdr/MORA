@@ -1,0 +1,511 @@
+{
+    "metadata": {
+        "title": "Story 1: Adventure with Lizard",
+        "age_range": "3-5",
+        "genre": "Fiction",
+        "themes": [
+            "words_with_l_initial",
+            "words_with_r_initial"
+        ],
+        "target_words": [
+            "{lizard}",
+            "{lion}",
+            "{library}",
+            "{road}",
+            "{lighthouse}",
+            "{rainforest}",
+            "{lamp}",
+            "{laptop}",
+            "{letter}",
+            "{rock}",
+            "{ribbon}",
+            "{rain}",
+            "{light}",
+            "{rope}",
+            "{ring}",
+            "{leaf}",
+            "{lollipop}"
+        ]
+    },
+    "characters": [
+        {
+            "name": "{lizard}",
+            "description": "fits excited and energetic vibe;"
+        },
+        {
+            "name": "{lion}",
+            "description": "fits aggressive and intimidating vibe;"
+        }
+    ],
+    "places": [
+        {
+            "name": "{library}",
+            "description": "a quiet and welcoming place where the story begins;",
+            "destination": false,
+            "props": [
+                "{lamp}",
+                "{laptop}",
+                "{letter}"
+            ]
+        },
+        {
+            "name": "{road}",
+            "description": "the path they travel on the way to their destination;",
+            "destination": false,
+            "props": [
+                "{rock}",
+                "{ribbon}",
+                "{rain}"
+            ]
+        },
+        {
+            "name": "{lighthouse}",
+            "description": "a beautiful scenic place where they are happy to arrive, overlooking the water;",
+            "destination": true,
+            "props": [
+                "{light}",
+                "{rope}",
+                "{ring}"
+            ]
+        },
+        {
+            "name": "{rainforest}",
+            "description": " a wild and lush setting where they are happy to arrive surrounded by nature;",
+            "destination": true,
+            "props": [
+                "{rain}",
+                "{leaf}",
+                "{lollipop}"
+            ]
+        }
+    ],
+    "scenes": [
+        {
+            "id": "scene_0",
+            "description": "{lizard} notices the user and introduces themselves.",
+            "characters": [
+                "{lizard}"
+            ],
+            "location": [
+                "{library}"
+            ],
+            "props": [
+                "{lamp}",
+                "{laptop}",
+                "{letter}"
+            ],
+            "dialogue_templates": [
+                {
+                    "character": "{lizard}",
+                    "prompt": "Introduce yourself energetically.",
+                    "image_path": "story_img_850518/scene_0_0.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Say hi to {lizard} and introduce yourself as well.",
+                    "image_path": "story_img_850518/scene_0_1.png"
+                },
+                {
+                    "character": "{lizard}",
+                    "prompt": "Shortly react to the user's introduction. Ask user where they want to go between {lighthouse} and {rainforest} for an adventure.",
+                    "image_path": "story_img_850518/scene_0_2.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Select the destination where you want to go.",
+                    "image_path": "story_img_850518/scene_0_3.png",
+                    "interaction": "select_destination",
+                    "interact_image": [
+                        "story_img_850518/scene_0_3_{lighthouse}.png",
+                        "story_img_850518/scene_0_3_{rainforest}.png"
+                    ]
+                },
+                {
+                    "character": "{lizard}",
+                    "prompt": "React to the user's answer. Excited to go to {destination} with the user.",
+                    "image_path": "story_img_850518/scene_0_4.png"
+                }
+            ],
+            "next_scenes": [
+                "scene_1"
+            ]
+        },
+        {
+            "id": "scene_1",
+            "description": "{lizard} walks with user in {road} on the way to {destination}.",
+            "characters": [
+                "{lizard}"
+            ],
+            "location": [
+                "{road}"
+            ],
+            "props": [
+                "{rock}",
+                "{ribbon}",
+                "{rain}"
+            ],
+            "dialogue_templates": [
+                {
+                    "character": "{lizard}",
+                    "prompt": "Walk {road} with user and ask the user's feeling about the adventure to {destination}.",
+                    "image_path": "story_img_850518/scene_1_0.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Answer {lizard}'s question about the adventure to {destination}.",
+                    "image_path": "story_img_850518/scene_1_1.png"
+                },
+                {
+                    "character": "{lizard}",
+                    "prompt": "React to the user's answer.",
+                    "image_path": "story_img_850518/scene_1_2.png"
+                },
+                {
+                    "character": "{lizard}",
+                    "prompt": "Ask the user to collect {rock}, {ribbon}, {rain} on the {road}.",
+                    "image_path": "story_img_850518/scene_1_3.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Find each item on the {road} and say out each item's name.",
+                    "image_path": "story_img_850518/scene_1_4.png",
+                    "interaction": "click",
+                    "interact_image": [
+                        "story_img_850518/scene_1_4_{rock}.png",
+                        "story_img_850518/scene_1_4_{ribbon}.png",
+                        "story_img_850518/scene_1_4_{rain}.png"
+                    ]
+                },
+                {
+                    "character": "{lizard}",
+                    "prompt": "Appraise the user's performance.",
+                    "image_path": "story_img_850518/scene_1_5.png"
+                }
+            ],
+            "next_scenes": [
+                "scene_2"
+            ]
+        },
+        {
+            "id": "scene_2",
+            "description": "A {lion} seriously causes trouble.",
+            "characters": [
+                "{lizard}",
+                "{lion}"
+            ],
+            "location": [
+                "{road}"
+            ],
+            "props": [
+                "{rock}",
+                "{ribbon}",
+                "{rain}"
+            ],
+            "dialogue_templates": [
+                {
+                    "character": "{lion}",
+                    "prompt": "Suddenly pop up and start to intimidate {lizard}.",
+                    "image_path": "story_img_850518/scene_2_0.png"
+                },
+                {
+                    "character": "{lizard}",
+                    "prompt": "Confused and ask {lion} what's wrong in fear.",
+                    "image_path": "story_img_850518/scene_2_1.png"
+                },
+                {
+                    "character": "{lion}",
+                    "prompt": "Intimidate {lizard} using their characteristic associated with it's name.",
+                    "image_path": "story_img_850518/scene_2_2.png"
+                },
+                {
+                    "character": "{lizard}",
+                    "prompt": "Ask the user to think how can stop {lion} in fear.",
+                    "image_path": "story_img_850518/scene_2_3.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Choose the item to stop {lion}.",
+                    "image_path": "story_img_850518/scene_2_4.png",
+                    "interaction": "choose",
+                    "interact_image": [
+                        "story_img_850518/scene_2_4_{rain}.png",
+                        "story_img_850518/scene_2_4_{rock}.png",
+                        "story_img_850518/scene_2_4_{ribbon}.png"
+                    ]
+                },
+                {
+                    "character": "{lizard}",
+                    "prompt": "Say okay to user's choice, hold {chosen_item} and ready ",
+                    "image_path": [
+                        "story_img_850518/scene_2_5_with_{rain}.png",
+                        "story_img_850518/scene_2_5_with_{rock}.png",
+                        "story_img_850518/scene_2_5_with_{ribbon}.png"
+                    ]
+                }
+            ],
+            "next_scenes": [
+                "scene_3"
+            ]
+        },
+        {
+            "id": "scene_3",
+            "description": "Scared but brave {lizard} tries to stop {lion} in intense situation.",
+            "characters": [
+                "{lizard}",
+                "{lion}"
+            ],
+            "location": [
+                "{road}"
+            ],
+            "dialogue_templates": [
+                {
+                    "character": "{lizard}",
+                    "prompt": "Attack {lion} with {chosen_item} to stop it with bravery and fearlessness.",
+                    "image_path": [
+                        "story_img_850518/scene_3_0_with_{rock}.png",
+                        "story_img_850518/scene_3_0_with_{ribbon}.png",
+                        "story_img_850518/scene_3_0_with_{rain}.png"
+                    ]
+                },
+                {
+                    "character": "{lion}",
+                    "prompt": "React to bravery and fearlessness of {lizard}'s action. Try to escape from {lizard}.",
+                    "image_path": "story_img_850518/scene_3_1.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Cheer up {lizard}. Shout {lion} to go away.",
+                    "image_path": "story_img_850518/scene_3_2.png"
+                },
+                {
+                    "character": "{lion}",
+                    "prompt": "Run away from {lizard}.",
+                    "image_path": "story_img_850518/scene_3_3.png"
+                }
+            ],
+            "next_scenes": [
+                "scene_4"
+            ],
+            "props": [
+                "{rock}",
+                "{ribbon}",
+                "{rain}"
+            ]
+        },
+        {
+            "id": "scene_4",
+            "description": "Relaxed {lizard} thanks the user for helping.",
+            "characters": [
+                "{lizard}"
+            ],
+            "location": [
+                "{road}"
+            ],
+            "dialogue_templates": [
+                {
+                    "character": "{lizard}",
+                    "prompt": "Relaxed and say thank you to the user.",
+                    "image_path": "story_img_850518/scene_4_0.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Excited to {lion}'s escape, and say thank you to {lizard}.",
+                    "image_path": "story_img_850518/scene_4_1.png"
+                },
+                {
+                    "character": "{lizard}",
+                    "prompt": "Ask the user to shout together to go to {destination}.",
+                    "image_path": "story_img_850518/scene_4_2.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Shout together to go to {destination}.",
+                    "image_path": "story_img_850518/scene_4_3.png"
+                },
+                {
+                    "character": "{lizard}",
+                    "prompt": "Say thank you to user for shouting together to go to {destination}.",
+                    "image_path": "story_img_850518/scene_4_4.png"
+                }
+            ],
+            "next_scenes": [
+                "scene_5_destination1",
+                "scene_5_destination2"
+            ],
+            "props": [
+                "{rock}",
+                "{ribbon}",
+                "{rain}"
+            ]
+        },
+        {
+            "id": "scene_5_destination1",
+            "description": "They arrive the {destination} and are excited.",
+            "characters": [
+                "{lizard}"
+            ],
+            "location": [
+                "{lighthouse}"
+            ],
+            "props": [
+                "{light}",
+                "{rope}",
+                "{ring}"
+            ],
+            "dialogue_templates": [
+                {
+                    "character": "{lizard}",
+                    "prompt": "Excited to arrive at {lighthouse} with the user.",
+                    "image_path": "story_img_850518/scene_5_destination1_0.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Say how do you feel about {lighthouse}.",
+                    "image_path": "story_img_850518/scene_5_destination1_1.png"
+                },
+                {
+                    "character": "{lizard}",
+                    "prompt": "React to the user's answer. Suggest user to find {ring}, {light}, {rope} at {lighthouse}.",
+                    "image_path": "story_img_850518/scene_5_destination1_2.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Find each item at {lighthouse} and say out each item's name.",
+                    "image_path": "story_img_850518/scene_5_destination1_3.png",
+                    "interaction": "click",
+                    "interact_image": [
+                        "story_img_850518/scene_5_destination1_3_{ring}.png",
+                        "story_img_850518/scene_5_destination1_3_{light}.png",
+                        "story_img_850518/scene_5_destination1_3_{rope}.png"
+                    ]
+                },
+                {
+                    "character": "{lizard}",
+                    "prompt": "Appraise the user's performance.",
+                    "image_path": "story_img_850518/scene_5_destination1_4.png"
+                }
+            ],
+            "next_scenes": [
+                "scene_6_destination1"
+            ]
+        },
+        {
+            "id": "scene_5_destination2",
+            "description": "They arrive the {destination} and are excited.",
+            "characters": [
+                "{lizard}"
+            ],
+            "location": [
+                "{rainforest}"
+            ],
+            "dialogue_templates": [
+                {
+                    "character": "{lizard}",
+                    "prompt": "Excited to arrive at {rainforest} with the user.",
+                    "image_path": "story_img_850518/scene_5_destination2_0.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Say how do you feel about {rainforest}.",
+                    "image_path": "story_img_850518/scene_5_destination2_1.png"
+                },
+                {
+                    "character": "{lizard}",
+                    "prompt": "React to the user's answer. Suggest user to find {leaf}, {lollipop}, {rain} at {rainforest}.",
+                    "image_path": "story_img_850518/scene_5_destination2_2.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Find each item at {rainforest} and say out each item's name.",
+                    "image_path": "story_img_850518/scene_5_destination2_3.png",
+                    "interaction": "click",
+                    "interact_image": [
+                        "story_img_850518/scene_5_destination2_3_{leaf}.png",
+                        "story_img_850518/scene_5_destination2_3_{lollipop}.png",
+                        "story_img_850518/scene_5_destination2_3_{rain}.png"
+                    ]
+                },
+                {
+                    "character": "{lizard}",
+                    "prompt": "Appraise the user's performance.",
+                    "image_path": "story_img_850518/scene_5_destination2_4.png"
+                }
+            ],
+            "props": [
+                "{rain}",
+                "{leaf}",
+                "{lollipop}"
+            ],
+            "next_scenes": [
+                "scene_6_destination2"
+            ]
+        },
+        {
+            "id": "scene_6_destination1",
+            "description": "They wrap up the journey.",
+            "characters": [
+                "{lizard}"
+            ],
+            "location": [
+                "{lighthouse}"
+            ],
+            "target_words": [],
+            "dialogue_templates": [
+                {
+                    "character": "{lizard}",
+                    "prompt": "Ask the user to retrieve the whole journey.",
+                    "image_path": "story_img_850518/scene_6_destination1_0.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Talk about the journey with {lizard} using today's words.",
+                    "image_path": "story_img_850518/scene_6_destination1_1.png"
+                },
+                {
+                    "character": "{lizard}",
+                    "prompt": "Complement to the user. Say goodbye to the user.",
+                    "image_path": "story_img_850518/scene_6_destination1_2.png"
+                }
+            ],
+            "next_scenes": [],
+            "props": [
+                "{light}",
+                "{rope}",
+                "{ring}"
+            ]
+        },
+        {
+            "id": "scene_6_destination2",
+            "description": "They wrap up the journey.",
+            "characters": [
+                "{lizard}"
+            ],
+            "location": [
+                "{rainforest}"
+            ],
+            "props": [
+                "{rain}",
+                "{leaf}",
+                "{lollipop}"
+            ],
+            "dialogue_templates": [
+                {
+                    "character": "{lizard}",
+                    "prompt": "Ask the user to retrieve the whole journey.",
+                    "image_path": "story_img_850518/scene_6_destination2_0.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Talk about the journey with {lizard} using today's words.",
+                    "image_path": "story_img_850518/scene_6_destination2_1.png"
+                },
+                {
+                    "character": "{lizard}",
+                    "prompt": "Complement to the user. Say goodbye to the user.",
+                    "image_path": "story_img_850518/scene_6_destination2_2.png"
+                }
+            ],
+            "next_scenes": []
+        }
+    ]
+}

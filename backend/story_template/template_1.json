@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "age_range": "5-7",
+    "genre": "Trip",
+    "themes": [],
+    "target_words": [
+      "{target_word1}",
+      "{target_word2}",
+      "{target_word3}"
+    ]
+  },
+  "characters": [
+    {
+      "name": "{character1}",
+      "description": "Kind and friendly; uses short, friendly sentences."
+    },
+    {
+      "name": "{character2}",
+      "description": "Excited and energetic; uses short, excited sentences."
+    }
+  ],
+  "places": [
+    {
+      "name": "{place1}",
+      "description": "A friendly and welcoming place",
+      "destination": false,
+      "props": []
+    },
+    {
+      "name": "{place2}",
+      "description": "A place where all characters are exploring. Interactable objects should be there.",
+      "destination": false,
+      "props": []
+    },
+    {
+      "name": "{place3}",
+      "description": "A place where {character1} and {character2} are wrapping up the story.",
+      "destination": true,
+      "props": []
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_0",
+      "description": "User arrives at {place1} where {character1} greets the user.",
+      "characters": [
+        "{character1}",
+        "{character2}"
+      ],
+      "location": [
+        "{place1}"
+      ],
+      "props": [],
+      "dialogue_templates": [
+        {
+          "character": "{character1}",
+          "prompt": "Greet the user warmly and introduce yourself.",
+          "image_path": ""
+        },
+        {
+          "character": "{character2}",
+          "prompt": "Make a loud sound to catch the user's attention.",
+          "image_path": ""
+        },
+        {
+          "character": "{user}",
+          "prompt": "Say hello to {character1} and {character2}.",
+          "image_path": ""
+        },
+        {
+          "character": "{character2}",
+          "prompt": "Introduce {place1} to the user. Doing {interaction_word1} using/with {target_word1}.",
+          "image_path": ""
+        },
+        {
+          "character": "{user}",
+          "prompt": "React to {character2}'s introduction of {place1}. {target_word1} and {interaction_word1} should be mentioned.",
+          "image_path": ""
+        },
+        {
+          "character": "{character1}",
+          "prompt": "Ask the user if they want to look around {place2}.",
+          "image_path": ""
+        },
+        {
+          "character": "{user}",
+          "prompt": "Agree to look around {place2}.",
+          "image_path": ""
+        },
+        {
+          "character": "{character2}",
+          "prompt": "Excited and say let's go to {place2}.",
+          "image_path": ""
+        }
+      ],
+      "next_scenes": [
+        "scene_1"
+      ]
+    },
+    {
+      "id": "scene_1",
+      "description": "User explores {place2} with {character1} and {character2}. Watch {target_word2} and have fun.",
+      "characters": [
+        "{character1}",
+        "{character2}"
+      ],
+      "location": [
+        "{place2}"
+      ],
+      "props": [],
+      "dialogue_templates": [
+        {
+          "character": "{character1}",
+          "prompt": "Talking about {place2}. Ask the user's opinion if you want to do {interaction_word2} in {place2}.",
+          "image_path": ""
+        },
+        {
+          "character": "{user}",
+          "prompt": "Answer {character1}'s question about {place2} as detailed as possible.",
+          "image_path": ""
+        },
+        {
+          "character": "{character2}",
+          "prompt": "React to {user}'s answer. Suddenly, find {target_word2}.",
+          "image_path": ""
+        },
+        {
+          "character": "{character2}",
+          "prompt": "Talk about {target_word2} and ask the user if the user wants to do {interaction_word2} with {target_word2}.",
+          "image_path": ""
+        },
+        {
+          "character": "{user}",
+          "prompt": "Tell what you think about {target_word2}.",
+          "image_path": ""
+        },
+        {
+          "character": "{character1}",
+          "prompt": "React to {user}'s answer. Happy that user and {character2} seem to have fun with {target_word2}.",
+          "image_path": ""
+        }
+      ],
+      "next_scenes": [
+        "scene_2"
+      ]
+    },
+    {
+      "id": "scene_2",
+      "description": "At {place3}, {character1} and {character2} are having fun with {target_word3} and wrap up the story.",
+      "characters": [
+        "{character1}",
+        "{character2}"
+      ],
+      "location": [
+        "{place3}"
+      ],
+      "props": [],
+      "dialogue_templates": [
+        {
+          "character": "{character2}",
+          "prompt": "Move from {place2} to {place3}. Ask the user what the user wants to do in {place3}.",
+          "image_path": ""
+        },
+        {
+          "character": "{user}",
+          "prompt": "Answer {character2}'s question about {place3}.",
+          "image_path": ""
+        },
+        {
+          "character": "{character1}",
+          "prompt": "React to {user}'s answer. Do something with {target_word3}.",
+          "image_path": ""
+        },
+        {
+          "character": "{character2}",
+          "prompt": "Have fun with {target_word3}. Ask the user if they want to do {interaction_word3} using/with {target_word3}.",
+          "image_path": ""
+        },
+        {
+          "character": "{user}",
+          "prompt": "Say your opinion about doing {interaction_word3} using/with {target_word3}.",
+          "image_path": ""
+        },
+        {
+          "character": "{character2}",
+          "prompt": "Simply react to {user}'s answer.",
+          "image_path": ""
+        },
+        {
+          "character": "{character1}",
+          "prompt": "Talk about your opinion to do {interaction_word3} using/with {target_word3}.",
+          "image_path": ""
+        },
+        {
+          "character": "{character1}",
+          "prompt": "Wrap up the story by saying goodbye to the user. Happy that user and {character2} are having fun in adventure.",
+          "image_path": ""
+        },
+        {
+          "character": "{user}",
+          "prompt": "Talk about the whole story including {target_word1}, {target_word2}, {target_word3}.",
+          "image_path": ""
+        }
+      ],
+      "next_scenes": []
+    }
+  ]
+}

@@ -1,0 +1,615 @@
+/* 왼쪽 사이드바 (Target Words) */
+.left-sidebar {
+    width: 280px; /* 300px에서 280px로 축소 */
+    position: sticky;
+    top: 20px;
+    flex-shrink: 0;
+}
+
+/* 오른쪽 사이드바 (Mouth Shapes) */
+.right-sidebar {
+    width: 300px; /* 300px에서 280px로 축소 */
+    position: sticky;
+    top: 20px;
+    flex-shrink: 0;
+}
+
+/* 기존 sidebars-container는 더 이상 사용하지 않음 */
+.sidebars-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    position: sticky;
+    top: 20px;
+    flex-shrink: 0; /* 사이드바가 줄어들지 않도록 */
+}
+
+/* 입 모양 사이드바 스타일 */
+.mouth-sidebar {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.mouth-sidebar.collapsed {
+    height: 60px;
+    padding: 20px 10px;
+}
+
+
+
+.mouth-sidebar.collapsed .mouth-sidebar-content {
+    display: none;
+}
+
+
+.mouth-sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.mouth-sidebar-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+}
+
+.mouth-sidebar-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    min-width: 30px;
+    text-align: center;
+}
+
+.mouth-sidebar-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.mouth-sidebar-content {
+    transition: all 0.3s ease;
+}
+
+.mouth-image-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.mouth-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.mouth-image:hover {
+    transform: scale(1.05);
+}
+
+.mouth-placeholder {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 40px 20px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.sound-info {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.sound-info h4 {
+    margin: 0 0 15px 0;
+    color: #ffd700;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.sound-info p {
+    margin: 5px 0;
+    opacity: 0.9;
+}
+
+/* 새로운 섹션 스타일 */
+.sound-description-section,
+.sound-gesture-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-left: 3px solid rgba(255, 215, 0, 0.6);
+}
+
+.sound-gesture-section {
+    border-left-color: rgba(76, 175, 80, 0.6);
+}
+
+.sound-section-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.sound-section-icon {
+    font-size: 1.1rem;
+    min-width: 20px;
+}
+
+.sound-section-title {
+    flex: 1;
+    color: #ffd700;
+    font-size: 0.95rem;
+}
+
+.sound-gesture-section .sound-section-title {
+    color: #81c784;
+}
+
+.sound-section-content {
+    margin: 0;
+    padding-left: 28px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.9rem;
+}
+
+/* 스피커 버튼 스타일 */
+.sound-speaker-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: white;
+    vertical-align: middle;
+}
+
+.sound-speaker-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sound-speaker-btn:active {
+    transform: scale(0.95);
+}
+
+/* 입 모양 이미지 그리드 스타일 */
+.mouth-images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* 120px에서 100px로 조정 */
+    gap: 12px; /* 15px에서 12px로 조정 */
+    margin-bottom: 20px;
+}
+
+.mouth-image-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2px; /* 10px에서 8px로 조정 */
+    transition: all 0.3s ease;
+    min-height: 90px; /* 최소 높이 설정으로 일관성 유지 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mouth-image-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.mouth-image-item img {
+    width: 100px; /* 고정 너비 */
+    object-fit: cover; /* 비율 유지하면서 영역 채우기 */
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.mouth-image-item img:hover {
+    transform: scale(1.05);
+}
+
+.mouth-image-label {
+    margin-top: 8px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.mouth-image-item.active {
+    background: rgba(255, 215, 0, 0.3);
+    border: 2px solid #ffd700;
+}
+
+.mouth-image-item.active .mouth-image-label {
+    color: #ffd700;
+    font-weight: 600;
+}
+
+/* Target Words 사이드바 스타일 수정 */
+.sidebar {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.sidebar.collapsed {
+    height: 60px;
+    padding: 20px 10px;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.sidebar-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+}
+
+.sidebar-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    min-width: 30px;
+    text-align: center;
+}
+
+/* 공통 헤더/토글 스타일 */
+.sidebar-header, .mouth-sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.sidebar-title, .mouth-sidebar-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+}
+
+.sidebar-toggle, .mouth-sidebar-toggle, .sidebar .sidebar-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    min-width: 30px;
+    text-align: center;
+}
+.sidebar-toggle:hover, .mouth-sidebar-toggle:hover, .sidebar .sidebar-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* 접힘 상태 디자인/동작 통일 */
+.sidebar.collapsed, .mouth-sidebar.collapsed {
+    padding: 20px 10px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.sidebar.collapsed .sidebar-content,
+.mouth-sidebar.collapsed .mouth-sidebar-content {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.word-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.word-item {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 8px 0;
+    padding: 12px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* 기본 호버 효과는 아래 더 구체적인 스타일로 덮어씀 */
+
+.word-item:active {
+    transform: scale(0.98);
+}
+
+.word-item.playing {
+    background: rgba(255, 255, 255, 0.3) !important;
+    animation: pulse 0.5s ease-in-out;
+}
+
+.word-item.highlighted {
+    background: linear-gradient(135deg, #ffd700, #ffed4e) !important;
+    color: #333 !important;
+    border: 2px solid #ffd700 !important;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6) !important;
+    transform: translateX(10px) scale(1.02) !important;
+    animation: highlightPulse 2s ease-in-out;
+}
+
+.word-item.repeat-playing {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52) !important;
+    color: white !important;
+    border: 2px solid #ff6b6b !important;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.6) !important;
+    transform: translateX(8px) scale(1.01) !important;
+    animation: repeat-pulse 2s infinite;
+}
+
+.word-item.repeat-playing::after {
+    content: '🔄';
+    margin-left: 8px;
+    font-size: 0.9em;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes repeat-pulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 107, 107, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 107, 107, 0.8);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes highlightPulse {
+    0% { 
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+        transform: translateX(10px) scale(1.05);
+    }
+    50% { 
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+        transform: translateX(15px) scale(1.08);
+    }
+    100% { 
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+        transform: translateX(10px) scale(1.05);
+    }
+}
+
+.word-count {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* 단어 텍스트 스타일 */
+.word-text {
+    display: block;
+    width: 100%;
+    transition: all 0.3s ease;
+    z-index: 2;
+    position: relative;
+}
+
+/* 버튼 컨테이너 스타일 - 기본적으로 숨김 */
+.word-buttons {
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    transform: translateY(-50%) translateX(100%);
+    display: flex;
+    gap: 6px;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* 호버 시 버튼들이 나타남 */
+.word-item:hover .word-buttons {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* 호버 시 단어 텍스트는 제자리 유지 */
+.word-item:hover .word-text {
+    transform: translateX(0);
+}
+
+/* 호버 시 배경 확장 효과 */
+.word-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(0px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+    padding-right: 80px; /* 버튼들을 위한 공간 확보 */
+}
+
+/* 공통 버튼 스타일 - 더 작고 깔끔하게 */
+.word-repeat-btn,
+.word-record-btn {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(0.9);
+}
+
+/* 반복재생 버튼 🔊 - 부드러운 녹색 */
+.word-repeat-btn:hover {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.9), rgba(129, 199, 132, 0.9));
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+.word-repeat-btn:active {
+    transform: scale(0.95);
+}
+
+/* 녹음 버튼 🎤 - 부드러운 빨간색 */
+.word-record-btn:hover {
+    background: linear-gradient(135deg, rgba(244, 67, 54, 0.9), rgba(239, 83, 80, 0.9));
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(244, 67, 54, 0.4);
+}
+
+.word-record-btn:active {
+    transform: scale(0.95);
+}
+
+/* 대화에 포함된 단어 하이라이트 */
+.word-item.in-dialogue {
+    border: 2px solid #ffd700 !important;
+    background: rgba(255, 215, 0, 0.1) !important;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3) !important;
+}
+
+.word-item.in-dialogue .word-text {
+    color: #ffd700 !important;
+    font-weight: 600 !important;
+}
+
+/* 반복재생 중인 상태 - 더 예쁜 효과 */
+.word-repeat-btn.playing {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.9), rgba(129, 199, 132, 0.9)) !important;
+    color: white !important;
+    transform: scale(1) !important;
+    animation: repeat-btn-pulse 2s infinite;
+}
+
+/* 녹음 중인 상태 - 더 예쁜 효과 */
+.word-record-btn.recording {
+    background: linear-gradient(135deg, rgba(244, 67, 54, 0.9), rgba(239, 83, 80, 0.9)) !important;
+    color: white !important;
+    transform: scale(1) !important;
+    animation: record-btn-pulse 1s infinite;
+}
+
+@keyframes repeat-btn-pulse {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 6px 25px rgba(76, 175, 80, 0.8);
+        transform: scale(1.05);
+    }
+}
+
+@keyframes record-btn-pulse {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(244, 67, 54, 0.4);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 6px 25px rgba(244, 67, 54, 0.8);
+        transform: scale(1.05);
+    }
+}
+
+/* 호버 시에도 버튼들이 보이도록 하는 추가 효과 */
+.word-item:hover .word-buttons {
+    animation: slideInFromRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-tip {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 12px;
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateY(-50%) translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-50%) translateX(0);
+        opacity: 1;
+    }
+}

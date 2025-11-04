@@ -1,0 +1,6 @@
+======== hamming_feature_edit_distance ========
+Distance mean: 1.6174479166666664
+Distance std: 1.3767568018608545
+Distance median: 1.25
+Distance min: 0.0
+Distance max: 13.0

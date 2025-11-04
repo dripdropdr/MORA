@@ -1,0 +1,408 @@
+{
+    "metadata": {
+      "age_range": "3-5",
+      "genre": "Fiction",
+      "themes": [],
+      "target_words": []
+    },
+    "characters": [
+      {
+        "name": "{character1}",
+        "description": "has excited and energetic vibe"
+      },
+      {
+        "name": "{character2}",
+        "description": "acts aggressive and intimidating"
+      }
+    ],
+    "places": [
+      {
+        "name": "{place1}",
+        "description": "Where they start the story.",
+        "destination": false,
+        "props": []
+      },
+      {
+        "name": "{place2}",
+        "description": "Where on the way to destination",
+        "destination": false,
+        "props": []
+      },
+      {
+        "name": "{destination1}",
+        "description": "A place where they are happy to arrive and beautiful scenery.",
+        "destination": true,
+        "props": []
+      },
+      {
+        "name": "{destination2}",
+        "description": "A place where they are happy to arrive and wild scenery.",
+        "destination": true,
+        "props": []
+      }
+    ],
+    "scenes": [
+      {
+        "id": "scene_0",
+        "description": "{character1} notices the user and introduces themselves.",
+        "characters": [
+          "{character1}"
+        ],
+        "location": [
+          "{place1}"
+        ],
+        "props": [],
+        "dialogue_templates": [
+          {
+            "character": "{character1}",
+            "prompt": "Express surprise at seeing the user and introduce yourself energetically.",
+            "image_path": ""
+          },
+          {
+            "character": "{user}",
+            "prompt": "Say hi to {character1}. Introduce yourself as well.",
+            "image_path": ""
+          },
+          {
+            "character": "{character1}",
+            "prompt": "Shortly react to the user's introduction. Suggeest user to choose the destination for an adventure.",
+            "image_path": ""
+          },
+          {
+            "character": "{user}",
+            "prompt": "Choose the destination where you want to go between {destination1} and {destination2}.",
+            "image_path": "",
+            "interaction": "select_destination"
+          },
+          {
+            "character": "{character1}",
+            "prompt": "React to the user's answer. Excited to go to {destination} with the user.",
+            "image_path": ""
+          }
+        ],
+        "next_scenes": ["scene_1"]
+      },
+      {
+        "id": "scene_1",
+        "description": "{character1} walks with user in {place2}.",
+        "characters": [
+          "{character1}"
+        ],
+        "location": [
+          "{place2}"
+        ],
+        "props": [
+          "{prop1}", 
+          "{prop2}",
+          "{prop3}"
+        ],
+        "dialogue_templates": [
+          {
+            "character": "{character1}",
+            "prompt": "Walk {place2} with user and ask the user's feeling about the adventure.",
+            "image_path": ""
+          },
+          {
+            "character": "{user}",
+            "prompt": "Answer {character1}'s question about the adventure to destination.",
+            "image_path": ""
+          },
+          {
+            "character": "{character1}",
+            "prompt": "React to the user's answer.",
+            "image_path": ""
+          },
+          {
+            "character": "{character1}",
+            "prompt": "Ask the user to collect items on the {place2}",
+            "image_path": ""
+        },
+        {
+            "character": "{user}",
+            "prompt": "Find each item on the {place2} and say out each item's name.",
+            "image_path": "",
+            "interaction": "click"
+        },
+        {
+            "character": "{character1}",
+            "prompt": "Appraise the user's performance.",
+            "image_path": ""
+        }
+        ],
+        "next_scenes": ["scene_2"]
+      },
+      {
+        "id": "scene_2",
+        "description": "A {character2} seriously causes trouble.",
+        "characters": [
+          "{character1}",
+          "{character2}"
+        ],
+        "location": [
+          "{place2}"
+        ],
+        "props": [
+          "{prop1}",
+          "{prop2}",
+          "{prop3}"
+        ],
+        "dialogue_templates": [
+          {
+            "character": "{character2}",
+            "prompt": "Suddenly pop up and start to intimidate {character1}.",
+            "image_path": ""
+          },
+          {
+            "character": "{character1}",
+            "prompt": "Confused and ask {character2} what's wrong in fear.",
+            "image_path": ""
+          },
+          {
+            "character": "{character2}",
+            "prompt": "Intimidate {character1} using their characteristic associated with it's name.",
+            "image_path": ""
+          },
+          {
+            "character": "{character1}",
+            "prompt": "Ask the user to think how can stop {character2} in fear.",
+            "image_path": ""
+          },
+          {
+            "character": "{user}",
+            "prompt": "Choose the item to stop {character2}.",
+            "image_path": "",
+            "interaction": "choose"
+          },
+          {
+            "character": "{character1}",
+            "prompt": "Say okay to user's choice.",
+            "image_path": ""
+          }
+        ],
+        "next_scenes": ["scene_3"]
+      },
+      {
+        "id": "scene_3",
+        "description": "Scared but brave {character1} tries to stop {character2} in intense situation.",
+        "characters": [
+          "{character1}",
+          "{character2}"
+        ],
+        "location": [
+          "{place2}"
+        ],
+        "dialogue_templates": [
+          {
+            "character": "{character1}",
+            "prompt": "Act towards {character2} to stop it with bravery and fearlessness.",
+            "image_path": ""
+          },
+          {
+            "character": "{character2}",
+            "prompt": "React to bravery and fearlessness of {character1}'s action. Try to escape from {character1}.",
+            "image_path": ""
+          },
+          {
+            "character": "{user}",
+            "prompt": "Cheer up {character1}. Shout {character2} to go away.",
+            "image_path": "",
+            "interaction": "shout"
+          },
+          {
+            "character": "{character2}",
+            "prompt": "Run away from {character1}.",
+            "image_path": ""
+          }
+        ],
+        "next_scenes": ["scene_4"]
+      },
+      {
+        "id": "scene_4",
+        "description": "Relaxed {character1} thanks the user for helping.",
+        "characters": [
+          "{character1}"
+        ],
+        "location": [
+          "{place2}"
+        ],
+        "dialogue_templates": [
+          {
+            "character": "{character1}",
+            "prompt": "Relaxed and say thank you to the user.",
+            "image_path": ""
+        },
+        {
+            "character": "{user}",
+            "prompt": "Excited to {character2}'s escape.",
+            "image_path": ""
+        },
+        {
+            "character": "{character1}",
+            "prompt": "Ask the user to shout together to go to destination.",
+            "image_path": ""
+        },
+        {
+            "character": "{user}",
+            "prompt": "Shout together to go to destination.",
+            "image_path": "",
+            "interaction": "shout"
+        },
+        {
+            "character": "{character1}",
+            "prompt": "Say thank you to user for shouting together to go to destination.",
+            "image_path": ""
+        }
+        ],
+        "next_scenes": ["scene_5_destination1", "scene_5_destination2"]
+      },
+      {
+        "id": "scene_5_destination1",
+        "description": "They arrive the destination and are excited.",
+        "characters": [
+          "{character1}"
+        ],
+        "location": [
+          "{destination1}"
+        ],
+        "props": [
+          "{prop1}",
+          "{prop2}",
+          "{prop3}"
+        ],
+        "dialogue_templates": [
+          {
+            "character": "{character1}",
+            "prompt": "Excited to arrive at {destination1} with the user.",
+            "image_path": ""
+          },
+          {
+            "character": "{user}",
+            "prompt": "Touch somewhere at {destination1} and see what happens.",
+            "image_path": "",
+            "interaction": "touch"
+          },
+          {
+            "character": "{character1}",
+            "prompt": "React to the user's excitement. Suggest user to find an item at {destination1}.",
+            "image_path": ""
+          },
+          {
+            "character": "{user}",
+            "prompt": "Find each item at {destination1} and say out each item's name.",
+            "image_path": "",
+            "interaction": "click"
+        },
+        {
+            "character": "{character1}",
+            "prompt": "Appraise the user's performance.",
+            "image_path": ""
+        }
+        ],
+        "next_scenes": ["scene_6_destination1"]
+      },
+      {
+        "id": "scene_5_destination2",
+        "description": "They arrive the destination and are excited.",
+        "characters": [
+          "{character1}"
+        ],
+        "location": [
+          "{destination2}"
+        ],
+        "props": [
+          "{prop1}",
+          "{prop2}",
+          "{prop3}"
+        ],
+        "dialogue_templates": [
+          {
+            "character": "{character1}",
+            "prompt": "Excited to arrive at {destination2} with the user.",
+            "image_path": ""
+          },
+          {
+            "character": "{user}",
+            "prompt": "Touch somewhere at {destination2} and see what happens.",
+            "image_path": "",
+            "interaction": "touch"
+          },
+          {
+            "character": "{character1}",
+            "prompt": "React to the user's excitement. Suggest user to find an item at {destination2}.",
+            "image_path": ""
+          },
+          {
+            "character": "{user}",
+            "prompt": "Find each item at {destination2} and say out each item's name.",
+            "image_path": "",
+            "interaction": "click"
+        },
+        {
+            "character": "{character1}",
+            "prompt": "Appraise the user's performance.",
+            "image_path": ""
+        }
+        ],
+        "next_scenes": ["scene_6_destination2"]
+      },
+      {
+        "id": "scene_6_destination1",
+        "description": "They wrap up the journey.",
+        "characters": [
+          "{character1}"
+        ],
+        "location": [
+          "{destination1}"
+        ],
+        "target_words": [],
+        "dialogue_templates": [
+          {
+            "character": "{character1}",
+            "prompt": "Ask the user to retrieve the whole journey.",
+            "image_path": ""
+          },
+          {
+            "character": "{user}",
+            "prompt": "Talk about the journey with {character1} using today's words.",
+            "image_path": ""
+          },
+          {
+            "character": "{character1}",
+            "prompt": "Complement to the user. Say goodbye to the user.",
+            "image_path": ""
+          }
+        ],
+        "next_scenes": []
+      },
+      {
+        "id": "scene_6_destination2",
+        "description": "They wrap up the journey.",
+        "characters": [
+          "{character1}"
+        ],
+        "location": [
+          "{destination2}"
+        ],
+        "target_words": [],
+        "dialogue_templates": [
+          {
+            "character": "{character1}",
+            "prompt": "Ask the user to retrieve the whole journey.",
+            "image_path": ""
+          },
+          {
+            "character": "{user}",
+            "prompt": "Talk about the journey with {character1} using today's words.",
+            "image_path": ""
+          },
+          {
+            "character": "{character1}",
+            "prompt": "Complement to the user. Say goodbye to the user.",
+            "image_path": ""
+          }
+        ],
+        "next_scenes": []
+      }
+    ]
+  }
+  

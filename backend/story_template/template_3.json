@@ -1,0 +1,218 @@
+{
+    "metadata": {
+      "age_range": "3-5",
+      "genre": "Daily",
+      "themes": []
+    },
+    "characters": [
+      {
+        "name": "{character1}",
+        "personality": "Sassy and young",
+        "style": "Uses short, sassy sentences"
+      },
+      {
+        "name": "{character2}",
+        "personality": "Calm and gentle",
+        "style": "Uses short, gentle and soft sentences"
+      }
+    ],
+    "places": [
+      {
+        "name": "{place1}",
+        "description": "Where {character1} and {character2} live together."
+      },
+      {
+        "name": "{place2}",
+        "description": "A place where {character1} and {character2} are having fun."
+      },
+      {
+        "name": "{place3}",
+        "description": "A place where {character1} and {character2} go to travel."
+      }
+    ],
+    "target_words": [],
+    "scenes": [
+      {
+        "id": "scene_0",
+        "description": "User arrives at {place1} and say hi to {character1} and {character2}.",
+        "characters": [
+            "{character1}", "{character2}"
+        ],
+        "places": [
+            "{place1}"
+        ],
+        "target_words": [
+          "{target_word1}, {interaction_word1}"
+        ],
+        "dialogue_templates": [
+          {
+            "character": "{character1}",
+            "prompt": "Complaining about {target_word1}",
+            "image_path": ""
+          },
+          {
+            "character": "{character2}",
+            "prompt": "React to {character1}'s complaining. Say do {interaction_word1} using/with {target_word1}.",
+            "image_path": ""
+          },
+          {
+            "character": "{user}",
+            "prompt": "Cautiously say hi to {character1} and {character2}. Introduce yourself.",
+            "image_path": ""
+          },
+          {
+            "character": "{character2}",
+            "prompt": "Say hi to user and introduce yourself.",
+            "image_path": ""
+          },
+          {
+            "character": "{character1}",
+            "prompt": "Intersted to see user as a new person. Ask user's preference to do {interaction_word1} using/with {target_word1}.",
+            "image_path": ""
+          },
+          {
+            "character": "{user}",
+            "prompt": "Talk opinion to {character1}'s question that do {interaction_word1} using/with {target_word1}.",
+            "image_path": ""
+          },
+          {
+            "character": "{character1}",
+            "prompt": "React to {user}'s answer. Ask user to look other places for fun with complaining about {place1}.",
+            "image_path": ""
+          },
+          {
+            "character": "{user}",
+            "prompt": "Say yes.",
+            "image_path": ""
+          },
+          {
+            "character": "{character2}",
+            "prompt": "Say starting look around {place2} first."
+          }
+        ],
+        "next_scenes": ["scene_1"]
+      },
+      {
+        "id": "scene_1",
+        "description": "User explores {place2} with {character1} and {character2} and remind the memory of doing {interaction_word2} using/with {target_word2}.",
+        "characters": [
+          "{character1}", "{character2}"
+        ],
+        "places": [
+          "{place2}"
+        ],
+        "target_words": [
+          "{target_word2}, {interaction_word2}"
+        ],
+        "dialogue_templates": [
+          {
+              "character": "{character2}",
+              "prompt": "Introduce {place2} to the user that it's a fun place.",
+              "image_path": ""
+          },
+          {
+              "character": "{character1}",
+              "prompt": "Excited to talk about doing {interaction_word2} using/with {target_word2} in {place2}.",
+              "image_path": ""
+          },
+          {
+              "character": "{user}",
+              "prompt": "Ask why doing {interaction_word2} using/with {target_word2} is fun to {character1}.",
+              "image_path": ""
+          },
+          {
+              "character": "{character1}",
+              "prompt": "Answer {user}'s question. Ask user to do {interaction_word2} using/with {target_word2} together.",
+              "image_path": ""
+          },
+          {
+              "character": "{user}",
+              "prompt": "Say yes to {character1}'s question. Doing {interaction_word2} using/with {target_word2} together.",
+              "image_path": ""
+          },
+          {
+              "character": "{character1}",
+              "prompt": "Talk about the memory of doing {interaction_word2} using/with {target_word2} with {character2}.",
+              "image_path": ""
+          },
+          {
+              "character": "{user}",
+              "prompt": "React warmly to {character1}'s talk. Say your thoughts of {target_word2}.",
+              "image_path": ""
+          },
+          {
+              "character": "{character2}",
+              "prompt": "Touched by {character1}'s talk. Happy that user and {character1} seem to have fun.",
+              "image_path": ""
+          },
+          {
+              "character": "{character1}",
+              "prompt": "Say let's go to {place3}."
+          }
+        ],
+        "next_scenes": ["scene_2"]
+      },
+      {
+        "id": "scene_2",
+        "description": "At {place3}, {character1} and {character2} remind the memory of doing {interaction_word3} using/with {target_word3}.",
+        "characters": [
+          "{character1}", "{character2}"
+        ],
+        "places": [
+          "{place3}"
+        ],
+        "target_words": [
+          "{target_word3}"
+        ],
+        "dialogue_templates": [
+          {
+              "character": "{character2}",
+              "prompt": "Introduce {place3} to the user that this is the place where {character1} and {character2} go to travel.",
+              "image_path": ""
+          },
+          {
+              "character": "{user}",
+              "prompt": "Say your expeirence in {place3}. If you don't have any exprience, say you don't have any exprience.",
+              "image_path": ""
+          },
+          {
+              "character": "{character1}",
+              "prompt": "React to {user}'s answer.",
+              "image_path": ""
+          },
+          {
+              "character": "{user}",
+              "prompt": "Point out {target_word3} in {place3}. Ask {character1} what is it.",
+              "image_path": ""
+          },
+          {
+              "character": "{character1}",
+              "prompt": "Remind the memory related to {target_word3} in {place3}. Explain the memory they did {interaction_word3} using/with {target_word3}.",
+              "image_path": ""
+          },
+          {
+              "character": "{character2}",
+              "prompt": "Remind the feeling from that memory by {character1}'s talk. Say it's happy to be with {character1}.",
+              "image_path": ""
+          },
+          {
+            "character": "{character1}",
+            "prompt": "Touched by {character2}'s talk. Say it's nice to be with {character2}.",
+            "image_path": ""
+          },
+          {
+              "character": "{user}",
+              "prompt": "Say thank you for the tour. Wrap up the story by telling the feeling about {place1}, {place2}, {place3}.",
+              "image_path": ""
+          },
+          {
+              "character": "{character2}",
+              "prompt": "React warmly to {user}'s talk. Say it's nice to be with {user}.",
+              "image_path": ""
+          }
+        ],
+        "next_scenes": []
+      }
+    ]
+  }
+  

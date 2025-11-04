@@ -1,0 +1,6 @@
+======== weighted_feature_edit_distance ========
+Distance mean: 9.112268518518517
+Distance std: 11.952835398726844
+Distance median: 3.6666666666666665
+Distance min: 0.041666666666666664
+Distance max: 91.25

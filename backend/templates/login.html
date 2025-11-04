@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role-Playing Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>🎭 Role-Playing</h1>
+            <h2>Enter Your ID</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="user-id">User ID</label>
+                    <input type="text" id="user-id" name="user_id" placeholder="Enter your ID" required>
+                </div>
+                <button type="submit" id="login-btn">🚪 Login</button>
+            </form>
+            <div class="help-text">
+                <p>Enter your unique ID to access your stories and progress.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+</html>

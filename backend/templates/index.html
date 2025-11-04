@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Story Intervention: prototype</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}">
+    <script src="{{ url_for('static', filename='js/sidebar.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/utils.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/interaction.js') }}"></script>
+</head>
+<body>
+    <!-- 시작 오버레이 제거됨: 별도 /start 페이지 사용 -->
+
+    <div class="container" id="main-container">
+        <div class="header">
+            <!-- <h1>Interactive Story Intervention: prototype</h1> -->
+            <!-- <p>AI-assisted storytelling with interactive elements</p> -->
+            <div id="story-theme" class="story-theme" style="display: none;">
+                <div class="theme-badge">
+                    <span id="theme-text"></span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <a href="/start" class="header-btn">
+                    <span>🏁</span>
+                    <span>Back to Start</span>
+                </a>
+                <!-- <a href="/story_creating/" class="header-btn">
+                    <span>📚</span>
+                    <span>Create Story</span>
+                </a> -->
+                <a href="/recordings" class="header-btn">
+                    <span>🎤</span>
+                    <span>Recordings</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 메인 컨테이너 -->
+        <div class="main-layout">
+            <!-- Target Words 사이드바 (왼쪽) -->
+            <div class="left-sidebar">
+                <div class="sidebar">
+                    <div class="sidebar-header">
+                        <div class="sidebar-title">📚 Target Words</div>
+                        <button class="sidebar-toggle" onclick="toggleCollapsibleSidebar(this)">▶</button>
+                    </div>
+                    <div class="sidebar-content" id="sidebarContent">
+                        <div class="sidebar-tip" id="sidebarTip">💡 Click the word and practice!</div>
+                        <div class="word-count" id="wordCount">0 Words</div>
+                        <ul class="word-list" id="wordList">
+                            <!-- 단어들이 여기에 동적으로 추가됩니다 -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 메인 스토리 영역 -->
+            <div class="story-main">
+                <div id="story-container" class="story-container">
+                    
+                    <div class="image-container">
+                        <div id="placeholder-image" class="placeholder-image">
+                            Let's start the story!
+                        </div>
+                        <img id="story-image" class="story-image" style="display: none;" alt="Story Image">
+                        
+                        <!-- 목적지 선택 버튼들 컨테이너 -->
+                        <div id="destination-buttons-container" class="destination-buttons-container" style="display: none;">
+                        </div>
+                        
+                        <!-- 클릭 인터랙션 버튼들 컨테이너 -->
+                        <div id="click-buttons-container" class="click-buttons-container" style="display: none;">
+                            <!-- 화면 클릭을 위한 오버레이 -->
+                            <div id="click-screen-overlay" class="click-screen-overlay"></div>
+                        </div>
+
+                        <!-- 선택지 버튼들 컨테이너 -->
+                        <div id="choose-item-buttons-container" class="choose-item-buttons-container" style="display: none;">
+                        </div>
+                        
+                        <div id="dialogue-overlay" class="dialogue-overlay">
+                            <div class="dialogue-content">
+                                <div id="dialogue-character" class="dialogue-character"></div>
+                                <div id="dialogue-text" class="dialogue-text"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="controls-container">
+                        
+
+                        <div id="input-section" class="input-section">
+                            <div class="input-area">
+                                <input type="text" id="user-input" class="user-input" placeholder="Record the answer..." onkeypress="handleKeyPress(event)">
+                                <button class="btn btn-primary" onclick="submitUserInput()">Send</button>
+                                <button id="voice-btn" class="voice-btn" onclick="startVoiceInput()" title="Voice input">
+                                    🎤
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="button-group">
+                            <button id="next-btn" class="btn btn-primary" onclick="nextDialogue()" disabled>
+                                ⏭️ Next dialogue
+                            </button>
+                            <button id="next-scene-btn" class="btn btn-secondary" onclick="nextScene()" disabled>
+                                🎬 Next scene
+                            </button>
+                            <button id="learned-words-btn" class="btn btn-info" onclick="getLearnedWords()" style="display: none;">
+                                📚 Learned words
+                            </button>
+                            <button id="export-btn" class="btn btn-secondary" onclick="exportConversation()" style="display: none;">
+                                💾 Export
+                            </button>
+                        </div>
+
+                        <div id="status-section" class="status-section" style="display: none;">
+                            <div class="status-text" id="status-text"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mouth Shapes 사이드바 (오른쪽) -->
+            <div class="right-sidebar">
+                <!-- Tip Messages (Mouth Sidebar 위로 이동) -->
+                <div id="tip-message" class="tip-message" style="display: none;">
+                    <span style="color: #ffd700; font-weight: bold;">💡 Parents:</span> <br> "Add all target words to your answer!"
+                </div>
+                <div id="tip-message-word" class="tip-message-word" style="display: none;">
+                    <span style="color: #ffd700; font-weight: bold;">💡 Parents:</span> <br> "Speak the each target words!"
+                </div>
+                <div id="tip-message-mouth" class="tip-message-mouth" style="display: none;">
+                    <span style="color: #ffd700; font-weight: bold;">💡 Parents:</span> <br> instrcut the mouth shapes to children.
+                </div>
+                <div class="mouth-sidebar">
+                    <div class="mouth-sidebar-header">
+                        <div class="mouth-sidebar-title">👄 Mouth Shapes</div>
+                        <button class="sidebar-toggle" onclick="toggleCollapsibleSidebar(this)">▶</button>
+                    </div>
+                    <div class="mouth-sidebar-content" id="mouthSidebarContent">
+                        <div class="mouth-images-grid" id="mouthImagesGrid">
+                            <!-- 여러 입 모양 이미지가 여기에 표시됩니다 -->
+                        </div>
+                        <div class="sound-info" id="soundInfo">
+                            <!-- 소리 정보가 여기에 표시됩니다 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 목적지 선택 팝업 -->
+    <div id="destination-popup-overlay" class="destination-popup-overlay" style="display: none;"></div>
+    <div id="destination-popup" class="destination-popup" style="display: none;">
+        <h3>🎯 Destination Selected!</h3>
+        <p>If you want to select this destination, click one more time.</p>
+    </div>
+
+    <!-- 목적지 선택 팝업 -->
+    <div id="choose-item-popup-overlay" class="choose-item-popup-overlay" style="display: none;"></div>
+    <div id="choose-item-popup" class="choose-item-popup" style="display: none;">
+        <h3>🎯 Choose Item Selected!</h3>
+        <p>If you want to select this item, click one more time.</p>
+    </div>
+
+    <!-- 클릭 아이템 팝업 -->
+    <div id="click-item-popup-overlay" class="click-item-popup-overlay" style="display: none;"></div>
+    <div id="click-item-popup" class="click-item-popup" style="display: none;">
+        <h3>🎯 Click Item Selected!</h3>
+        <p>If you want to practice this word, click one more time.</p>
+    </div>
+
+    <div id="notification" class="notification"></div>
+</body>
+</html>
+

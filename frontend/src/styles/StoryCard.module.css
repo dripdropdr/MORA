@@ -1,0 +1,211 @@
+.storyItem {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  }
+  
+  .storyItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+  }
+  
+  .storyHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .storyTitle {
+    font-size: 1.4em;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .storyId {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 500;
+  }
+  
+  .storyDetails {
+    margin-bottom: 20px;
+  }
+  
+  .storyTargets {
+    margin-bottom: 20px;
+  }
+  
+  .targetSection {
+    margin-bottom: 15px;
+  }
+  
+  .targetTitle {
+    font-size: 0.95em;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .storyWords,
+  .storySounds {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    min-height: 24px;
+  }
+  
+  .wordTag {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .wordTag.more {
+    background: rgba(255, 255, 255, 0.15);
+    font-style: italic;
+    opacity: 0.8;
+  }
+  
+  .soundTag {
+    background: rgba(255, 193, 7, 0.3);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-weight: 600;
+    border: 1px solid rgba(255, 193, 7, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .storyModes {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .modeOption {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    min-width: 120px;
+  }
+  
+  .modeOption:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .modeOption.selected {
+    background: rgba(255, 255, 255, 0.9);
+    color: #667eea;
+    border-color: white;
+  }
+  
+  .modeTitle {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+  }
+  
+  .modeDescription {
+    font-size: 0.85em;
+    opacity: 0.8;
+  }
+  
+  .modeOption.selected .modeDescription {
+    opacity: 1;
+  }
+  
+  .startButton {
+    background: linear-gradient(135deg, #51cf66 0%, #40c057 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+    box-shadow: 0 8px 25px rgba(81, 207, 102, 0.3);
+  }
+  
+  .startButton:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(81, 207, 102, 0.4);
+  }
+  
+  .startButton:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .loading {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 8px;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .storyItem {
+      padding: 20px;
+    }
+  
+    .storyModes {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .modeOption {
+      min-width: auto;
+    }
+  
+    .targetSection {
+      margin-bottom: 12px;
+    }
+  
+    .targetTitle {
+      font-size: 0.9em;
+    }
+  
+    .wordTag,
+    .soundTag {
+      font-size: 0.8em;
+      padding: 3px 8px;
+    }
+  }

@@ -1,0 +1,105 @@
+{
+    "words_with_s_initial" : {
+        "places": ["school", "store", "street", "station", "studio", "supermarket", "swimming_pool", "skatepark", "soccer_field", "science_lab", "space_station", "subway", "seaside", "snow_mountain", "safari_park", "sky"],
+        "characters": ["sister", "son", "student", "sailor", "scientist", "singer", "soldier", "spider", "snake", "shark", "seahorse", "snail", "starfish", "swan", "squirrel"],
+        "verbs": ["sit", "save", "sing", "send", "say", "search", "skip", "smile", "speak", "spin", "swim", "start", "stop", "sleep", "stand", "show", "see", "sell", "serve", "study", "sweep", "switch"],
+        "props": ["sun", "socks", "shell", "star", "space", "slice", "season", "soap", "seal", "sand", "soup", "soda", "sea", "submarine", "sandwich", "scissors", "snow", "soapbox", "spoon", "shirt", "shoes", "suitcase", "stamp", "sticker"]
+    },
+    "words_with_s_final" : {
+        "places": ["house", "place", "office", "palace", "cottage", "bridge", "village", "college", "garage", "cage", "stage", "beach", "church", "school", "park"],
+        "characters": ["boss", "princess", "prince", "nurse", "waitress", "actress", "lioness", "tigress", "duchess", "goddess", "hostess", "stewardess"],
+        "verbs": ["kiss", "pass", "toss", "dance", "listen", "whisper", "race", "chase", "miss", "bless", "guess", "press", "dress", "address", "express", "impress", "confess"],
+        "props": ["bus", "grass", "glass", "dress", "mouse", "mess", "ice", "face", "race", "grasshopper", "compass", "octopus", "moose", "horse", "base", "geese", "dice", "peace", "piece", "juice", "rice", "voice", "choice", "price"]
+    },
+
+    "words_with_r_initial" : {
+        "places": ["road", "river", "restaurant", "room", "railway", "ranch", "resort", "ruins", "rooftop", "riverbank", "rainforest", "rocky_mountain", "red_sea", "russian_forest"],
+        "characters": ["rabbit", "ram", "rat", "robot", "raccoon", "raven", "reptile", "runner", "reader", "rider", "rescuer", "ranger", "reporter", "referee", "ruler"],
+        "verbs": ["run", "read", "ride", "roll", "reach", "raise", "race", "return", "rinse", "remember", "realize", "recognize", "receive", "respect", "relax", "repair", "repeat", "report"],
+        "props": ["red", "ring", "rice", "rock", "rain", "rose", "rope", "rug", "rocket", "ribbon", "record", "rainbow", "ruler", "rifle", "rectangle", "radio", "refrigerator", "remote", "rubber", "rope", "ruler", "ring"]
+    },
+    "words_with_r_final" : {
+        "places": ["corner", "center", "theater", "baker", "library", "factory", "bakery", "butcher", "barber", "prison", "kitchen", "garden", "barn", "garage"],
+        "characters": ["tiger", "monster", "doctor", "bear", "teacher", "farmer", "driver", "worker", "singer", "dancer", "painter", "writer", "soldier", "sailor"],
+        "verbs": ["whir", "transfer", "stir", "occur", "infer", "answer", "wonder", "remember", "consider", "deliver", "discover", "cover", "offer", "suffer"],
+        "props": ["mirror", "calendar", "picture", "butter", "dinosaur", "tractor", "water", "car", "guitar", "star", "jar", "hair", "door", "floor", "chair", "paper", "computer", "flower", "power", "hour", "color"]
+    },
+
+    "words_with_l_initial" : {
+        "places": ["lake", "library", "locker", "lamppost", "laundry", "laboratory", "lighthouse", "lumberyard", "landing", "lobby", "living_room", "lawn", "lounge"],
+        "characters": ["lady", "lion", "lizard", "ladybug", "librarian", "lawyer", "leader", "lifeguard", "librarian", "lumberjack", "landlord", "lover", "learner", "listener"],
+        "verbs": ["love", "land", "last", "listen", "locate", "lose", "lick", "lift", "look", "lock", "learn", "leave", "lie", "light", "like", "live", "load", "laugh", "lead", "lend", "let"],
+        "props": ["lamp", "leaf", "log", "ladder", "lemonade", "lunchbox", "laptop", "leather", "lesson", "letter", "light", "lock", "ladder", "lamp", "lunch", "lemon", "lime", "lollipop", "lotion", "lotion"]
+    },
+    "words_with_l_final" : {
+        "places": ["school", "hospital", "hotel", "castle", "tunnel", "temple", "village", "valley", "hill", "hall", "mall", "well", "rail", "jungle"],
+        "characters": ["girl", "animal", "angel", "devil"],
+        "verbs": ["feel", "peel", "pull", "drill", "yell", "twirl", "call", "fall", "fill", "kill", "sell", "tell", "well", "spell", "smell", "dwell"],
+        "props": ["ball", "bell", "pool", "apple", "table", "bottle", "pencil", "circle", "snail", "pail", "quail", "goal", "seal", "towel", "wheel", "meal", "real", "steel", "heel"]
+    },
+
+    "words_with_ch_initial" : {
+        "places": ["church", "chicken_farm", "cheese_factory", "chocolate_shop", "chess_club", "championship_field", "cherry_orchard", "chain_store", "chalk_mine", "chop_house"],
+        "characters": ["child", "champion", "chef", "chairman", "chairwoman", "chief", "chicken", "cheetah", "chimpanzee", "chameleon", "chipmunk", "chick", "champion", "chauffeur"],
+        "verbs": ["chase", "chew", "chop", "check", "charge", "change", "choose", "challenge", "charm", "chat", "cheer", "chill", "choke", "chop", "churn", "chuckle"],
+        "props": ["chair", "chicken", "cheese", "chalk", "chip", "cheek", "chain", "chalkboard", "chocolate", "cherry", "chopstick", "chop", "chop", "chop", "chop", "chop", "chop", "chop", "chop", "chop"]
+    },
+    "words_with_ch_final" : {
+        "places": ["beach", "kitchen", "church", "ranch", "porch", "bench", "lunch_room", "research_lab", "sandwich_shop", "torch_lighthouse"],
+        "characters": ["witch", "coach", "teacher", "preacher", "butcher", "catcher", "pitcher", "watcher", "matcher", "scratcher", "hatcher", "snatcher"],
+        "verbs": ["catch", "watch", "match", "pinch", "hatch", "snatch", "scratch", "reach", "teach", "preach", "approach", "attach", "detach", "dispatch"],
+        "props": ["peach", "pitch", "speech", "torch", "clutch", "lunch", "bench", "branch", "crunch", "punch", "bunch", "hunch", "munch", "scrunch"]
+    },
+
+    "words_with_m_initial" : {
+        "places": ["market", "museum", "mountain", "mall", "movie_theater", "music_hall", "mansion", "maze", "meadow", "moon", "mars", "mexico", "moscow", "madrid"],
+        "characters": ["man", "mother", "monkey", "mouse", "mermaid", "magician", "musician", "mechanic", "mailman", "milkman", "milkmaid", "mermaid", "monster", "mermaid"],
+        "verbs": ["make", "move", "meet", "mean", "mind", "miss", "mix", "melt", "mend", "mark", "measure", "mention", "marry", "march", "march", "march"],
+        "props": ["milk", "money", "map", "moon", "mountain", "music", "mirror", "magnet", "muffin", "muffin", "muffin", "muffin", "muffin", "muffin", "muffin", "muffin"]
+    },
+    "words_with_m_final" : {
+        "places": ["farm", "gym", "museum", "swimming_pool", "dream_land", "team_room", "home", "room", "bathroom", "bedroom", "classroom", "playroom"],
+        "characters": ["mom", "grandma", "swimming_coach", "team_captain", "dream_guide", "farm_worker", "gym_trainer", "museum_guide", "home_teacher"],
+        "verbs": ["swim", "dream", "seem", "team", "cream", "scream", "stream", "beam", "gleam", "steam", "team", "cream", "scream", "stream"],
+        "props": ["drum", "gum", "thumb", "plum", "broom", "room", "bathroom", "bedroom", "classroom", "playroom", "bathroom", "bedroom", "classroom", "playroom"]
+    },
+
+    "words_with_n_initial" : {
+        "places": ["night", "north", "neighborhood", "nursery", "newsroom", "nursery", "nightclub", "north_pole", "north_america", "north_korea", "north_africa"],
+        "characters": ["nurse", "neighbor", "night_guard", "news_reporter", "navigator", "nurse", "night_watchman", "north_pole_elf", "north_star_guide"],
+        "verbs": ["need", "name", "note", "nod", "nest", "navigate", "narrate", "nurture", "notice", "nudge", "nuzzle", "nibble", "navigate", "narrate"],
+        "props": ["night", "nose", "neck", "nail", "net", "nest", "nut", "newspaper", "notebook", "necklace", "napkin", "needle", "noodle", "number", "name"]
+    },
+    "words_with_n_final" : {
+        "places": ["garden", "kitchen", "barn", "mountain", "ocean", "heaven", "kitchen", "garden", "barn", "mountain", "ocean", "heaven", "kitchen", "garden"],
+        "characters": ["man", "woman", "child", "friend", "enemy", "stranger", "neighbor", "teacher", "student", "worker", "farmer", "driver", "singer"],
+        "verbs": ["run", "win", "begin", "spin", "grin", "pin", "tin", "fin", "bin", "din", "gin", "kin", "lin", "min", "pin", "rin", "sin", "tin"],
+        "props": ["pen", "ten", "hen", "den", "men", "zen", "ken", "len", "men", "pen", "ten", "hen", "den", "men", "zen", "ken", "len", "men"]
+    },
+
+    "words_with_p_initial" : {
+        "places": ["park", "playground", "pool", "party", "palace", "prison", "port", "pond", "peak", "plaza", "pier", "pavilion", "pavilion", "pavilion"],
+        "characters": ["princess", "prince", "pilot", "policeman", "postman", "painter", "player", "puppy", "penguin", "panda", "pig", "parrot", "penguin", "panda"],
+        "verbs": ["play", "put", "push", "pull", "pick", "pack", "pass", "paint", "plant", "pray", "point", "print", "press", "punch", "punch", "punch"],
+        "props": ["pen", "paper", "pencil", "phone", "picture", "pillow", "plate", "pot", "pan", "pizza", "pizza", "pizza", "pizza", "pizza", "pizza", "pizza"]
+    },
+    "words_with_p_final" : {
+        "places": ["shop", "stop", "camp", "jump", "bump", "lump", "dump", "hump", "jump", "bump", "lump", "dump", "hump", "jump", "bump", "lump"],
+        "characters": ["shop_keeper", "camp_leader", "jump_coach", "bump_guard", "lump_worker", "dump_truck_driver", "hump_camel", "jump_rabbit"],
+        "verbs": ["jump", "bump", "lump", "dump", "hump", "jump", "bump", "lump", "dump", "hump", "jump", "bump", "lump", "dump", "hump", "jump"],
+        "props": ["cup", "map", "cap", "tap", "gap", "lap", "nap", "rap", "sap", "tap", "gap", "lap", "nap", "rap", "sap", "tap", "gap", "lap"]
+    },
+
+    "words_with_t_initial" : {
+        "places": ["town", "train_station", "theater", "temple", "tower", "tunnel", "tree_house", "toy_store", "toy_factory", "toy_workshop", "toy_land"],
+        "characters": ["teacher", "trainer", "tourist", "traveler", "toy_maker", "toy_seller", "toy_buyer", "toy_collector", "toy_designer", "toy_engineer"],
+        "verbs": ["take", "tell", "talk", "think", "try", "turn", "touch", "throw", "teach", "train", "travel", "treat", "trust", "trap", "trap", "trap"],
+        "props": ["toy", "train", "truck", "tree", "table", "towel", "toothbrush", "toothpaste", "tooth", "toe", "tongue", "tail", "ticket", "ticket", "ticket"]
+    },
+    "words_with_t_final" : {
+        "places": ["street", "market", "forest", "beach", "mountain", "ocean", "desert", "jungle", "valley", "hill", "river", "lake", "pond", "stream"],
+        "characters": ["street_cleaner", "market_seller", "forest_ranger", "beach_lifeguard", "mountain_climber", "ocean_explorer", "desert_nomad"],
+        "verbs": ["meet", "eat", "beat", "heat", "seat", "meat", "neat", "peat", "seat", "meat", "neat", "peat", "seat", "meat", "neat", "peat", "seat"],
+        "props": ["cat", "hat", "bat", "rat", "mat", "sat", "fat", "pat", "cat", "hat", "bat", "rat", "mat", "sat", "fat", "pat", "cat", "hat"]
+    }
+}

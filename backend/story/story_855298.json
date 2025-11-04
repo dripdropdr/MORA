@@ -1,0 +1,513 @@
+{
+    "metadata": {
+        "title": "Story 2: Adventure with Squirrel",
+        "age_range": "3-5",
+        "genre": "Fiction",
+        "themes": [
+            "words_with_s_initial",
+            "words_with_r_initial"
+        ],
+        "target_words": [
+            "{seal}",
+            "{rainforest}",
+            "{rock}",
+            "{shell}",
+            "{sand}",
+            "{ring}",
+            "{sticker}",
+            "{seaside}",
+            "{rose}",
+            "{road}",
+            "{soap}",
+            "{raven}",
+            "{school}",
+            "{rope}",
+            "{shirt}",
+            "{rain}",
+            "{ribbon}",
+            "{squirrel}"
+        ]
+    },
+    "characters": [
+        {
+            "name": "{squirrel}",
+            "description": "has excited and energetic vibe;"
+        },
+        {
+            "name": "{raven}",
+            "description": "acts aggressive and intimidating;"
+        }
+    ],
+    "places": [
+        {
+            "name": "{school}",
+            "description": " where they start the story;",
+            "destination": false,
+            "props": [
+                "{soap}",
+                "{shirt}",
+                "{sticker}"
+            ]
+        },
+        {
+            "name": "{road}",
+            "description": " where on the way to destination;",
+            "destination": false,
+            "props": [
+                "{ring}",
+                "{rock}",
+                "{rope}"
+            ]
+        },
+        {
+            "name": "{seaside}",
+            "description": " a place where they are happy to arrive and beautiful scenery;",
+            "destination": true,
+            "props": [
+                "{shell}",
+                "{sand}",
+                "{seal}"
+            ]
+        },
+        {
+            "name": "{rainforest}",
+            "description": " a place where they are happy to arrive and wild scenery;",
+            "destination": true,
+            "props": [
+                "{rain}",
+                "{rose}",
+                "{ribbon}"
+            ]
+        }
+    ],
+    "scenes": [
+        {
+            "id": "scene_0",
+            "description": "{squirrel} notices the user and introduces themselves.",
+            "characters": [
+                "{squirrel}"
+            ],
+            "location": [
+                "{school}"
+            ],
+            "props": [
+                "{soap}",
+                "{shirt}",
+                "{sticker}"
+            ],
+            "dialogue_templates": [
+                {
+                    "character": "{squirrel}",
+                    "prompt": "Express surprise at seeing the user and introduce yourself energetically.",
+                    "image_path": "story_img_855298/scene_0_0.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Say hi to {squirrel}. Introduce yourself as well.",
+                    "image_path": "story_img_855298/scene_0_1.png"
+                },
+                {
+                    "character": "{squirrel}",
+                    "prompt": "Shortly react to the user's introduction. Suggeest user to choose the destination for an adventure, between {seaside} and {rainforest}.",
+                    "image_path": "story_img_855298/scene_0_2.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Choose the destination where you want to go between {seaside} and {rainforest}.",
+                    "image_path": "story_img_855298/scene_0_3.png",
+                    "interaction": "select_destination",
+                    "interact_image": [
+                        "story_img_855298/scene_0_3_{seaside}.png",
+                        "story_img_855298/scene_0_3_{rainforest}.png"
+                    ]
+                },
+                {
+                    "character": "{squirrel}",
+                    "prompt": "React to the user's answer. Excited to go to {destination} with the user.",
+                    "image_path": "story_img_855298/scene_0_4.png"
+                }
+            ],
+            "next_scenes": [
+                "scene_1"
+            ]
+        },
+        {
+            "id": "scene_1",
+            "description": "{squirrel} walks with user in {road}.",
+            "characters": [
+                "{squirrel}"
+            ],
+            "location": [
+                "{road}"
+            ],
+            "props": [
+                "{ring}",
+                "{rock}",
+                "{rope}"
+            ],
+            "dialogue_templates": [
+                {
+                    "character": "{squirrel}",
+                    "prompt": "Walk {road} with user and ask the user's feeling about the adventure.",
+                    "image_path": "story_img_855298/scene_1_0.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Answer {squirrel}'s question about the adventure to {destination}.",
+                    "image_path": "story_img_855298/scene_1_1.png"
+                },
+                {
+                    "character": "{squirrel}",
+                    "prompt": "React to the user's answer.",
+                    "image_path": "story_img_855298/scene_1_2.png"
+                },
+                {
+                    "character": "{squirrel}",
+                    "prompt": "Ask the user to collect items on the {road}",
+                    "image_path": "story_img_855298/scene_1_3.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Find each item on the {road} and say out each item's name.",
+                    "image_path": "story_img_855298/scene_1_4.png",
+                    "interaction": "click",
+                    "interact_image": [
+                        "story_img_855298/scene_1_4_{ring}.png",
+                        "story_img_855298/scene_1_4_{rock}.png",
+                        "story_img_855298/scene_1_4_{rope}.png"
+                    ]
+                },
+                {
+                    "character": "{squirrel}",
+                    "prompt": "Appraise the user's performance.",
+                    "image_path": "story_img_855298/scene_1_5.png"
+                }
+            ],
+            "next_scenes": [
+                "scene_2"
+            ]
+        },
+        {
+            "id": "scene_2",
+            "description": "A {raven} seriously causes trouble.",
+            "characters": [
+                "{squirrel}",
+                "{raven}"
+            ],
+            "location": [
+                "{road}"
+            ],
+            "props": [
+                "{ring}",
+                "{rock}",
+                "{rope}"
+            ],
+            "dialogue_templates": [
+                {
+                    "character": "{raven}",
+                    "prompt": "Suddenly pop up and start to intimidate {squirrel}.",
+                    "image_path": "story_img_855298/scene_2_0.png"
+                },
+                {
+                    "character": "{squirrel}",
+                    "prompt": "Confused and ask {raven} what's wrong in fear.",
+                    "image_path": "story_img_855298/scene_2_1.png"
+                },
+                {
+                    "character": "{raven}",
+                    "prompt": "Intimidate {squirrel} using their characteristic associated with it's name.",
+                    "image_path": "story_img_855298/scene_2_2.png"
+                },
+                {
+                    "character": "{squirrel}",
+                    "prompt": "Ask the user to think how can stop {raven} in fear.",
+                    "image_path": "story_img_855298/scene_2_3.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Choose the item to stop {raven}.",
+                    "image_path": "story_img_855298/scene_2_4.png",
+                    "interaction": "choose",
+                    "interact_image": [
+                        "story_img_855298/scene_2_4_{rock}.png",
+                        "story_img_855298/scene_2_4_{rope}.png",
+                        "story_img_855298/scene_2_4_{ring}.png"
+                    ]
+                },
+                {
+                    "character": "{squirrel}",
+                    "prompt": "Say okay to user's choice.",
+                    "image_path": "story_img_855298/scene_2_5.png"
+                }
+            ],
+            "next_scenes": [
+                "scene_3"
+            ]
+        },
+        {
+            "id": "scene_3",
+            "description": "Scared but brave {squirrel} tries to stop {raven} in intense situation.",
+            "characters": [
+                "{squirrel}",
+                "{raven}"
+            ],
+            "location": [
+                "{road}"
+            ],
+            "dialogue_templates": [
+                {
+                    "character": "{squirrel}",
+                    "prompt": "Act towards {raven} to stop it with bravery and fearlessness.",
+                    "image_path": "story_img_855298/scene_3_0.png"
+                },
+                {
+                    "character": "{raven}",
+                    "prompt": "React to bravery and fearlessness of {squirrel}'s action. Try to escape from {squirrel}.",
+                    "image_path": "story_img_855298/scene_3_1.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Cheer up {squirrel}. Shout {raven} to go away.",
+                    "image_path": "story_img_855298/scene_3_2.png",
+                    "interaction": "shout",
+                    "interact_image": []
+                },
+                {
+                    "character": "{raven}",
+                    "prompt": "Run away from {squirrel}.",
+                    "image_path": "story_img_855298/scene_3_3.png"
+                }
+            ],
+            "next_scenes": [
+                "scene_4"
+            ],
+            "props": [
+                "{ring}",
+                "{rock}",
+                "{rope}"
+            ]
+        },
+        {
+            "id": "scene_4",
+            "description": "Relaxed {squirrel} thanks the user for helping.",
+            "characters": [
+                "{squirrel}"
+            ],
+            "location": [
+                "{road}"
+            ],
+            "dialogue_templates": [
+                {
+                    "character": "{squirrel}",
+                    "prompt": "Relaxed and say thank you to the user.",
+                    "image_path": "story_img_855298/scene_4_0.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Excited to {raven}'s escape.",
+                    "image_path": "story_img_855298/scene_4_1.png"
+                },
+                {
+                    "character": "{squirrel}",
+                    "prompt": "Ask the user to shout together to go to destination.",
+                    "image_path": "story_img_855298/scene_4_2.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Shout together to go to destination.",
+                    "image_path": "story_img_855298/scene_4_3.png",
+                    "interaction": "shout",
+                    "interact_image": []
+                },
+                {
+                    "character": "{squirrel}",
+                    "prompt": "Say thank you to user for shouting together to go to destination.",
+                    "image_path": "story_img_855298/scene_4_4.png"
+                }
+            ],
+            "next_scenes": [
+                "scene_5_destination1",
+                "scene_5_destination2"
+            ],
+            "props": [
+                "{ring}",
+                "{rock}",
+                "{rope}"
+            ]
+        },
+        {
+            "id": "scene_5_destination1",
+            "description": "They arrive the destination and are excited.",
+            "characters": [
+                "{squirrel}"
+            ],
+            "location": [
+                "{seaside}"
+            ],
+            "props": [
+                "{shell}",
+                "{sand}",
+                "{seal}"
+            ],
+            "dialogue_templates": [
+                {
+                    "character": "{squirrel}",
+                    "prompt": "Excited to arrive at {seaside} with the user.",
+                    "image_path": "story_img_855298/scene_5_destination1_0.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Touch somewhere at {seaside} and see what happens.",
+                    "image_path": "story_img_855298/scene_5_destination1_1.png",
+                    "interaction": "touch",
+                    "interact_image": []
+                },
+                {
+                    "character": "{squirrel}",
+                    "prompt": "React to the user's excitement. Suggest user to find an item at {seaside}.",
+                    "image_path": "story_img_855298/scene_5_destination1_2.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Find each item at {seaside} and say out each item's name.",
+                    "image_path": "story_img_855298/scene_5_destination1_3.png",
+                    "interaction": "click",
+                    "interact_image": [
+                        "story_img_855298/scene_5_destination1_3_{sand}.png",
+                        "story_img_855298/scene_5_destination1_3_{shell}.png",
+                        "story_img_855298/scene_5_destination1_3_{seal}.png"
+                    ]
+                },
+                {
+                    "character": "{squirrel}",
+                    "prompt": "Appraise the user's performance.",
+                    "image_path": "story_img_855298/scene_5_destination1_4.png"
+                }
+            ],
+            "next_scenes": [
+                "scene_6_destination1"
+            ]
+        },
+        {
+            "id": "scene_5_destination2",
+            "description": "They arrive the destination and are excited.",
+            "characters": [
+                "{squirrel}"
+            ],
+            "location": [
+                "{rainforest}"
+            ],
+            "props": [
+                "{rain}",
+                "{rose}",
+                "{ribbon}"
+            ],
+            "dialogue_templates": [
+                {
+                    "character": "{squirrel}",
+                    "prompt": "Excited to arrive at {rainforest} with the user.",
+                    "image_path": "story_img_855298/scene_5_destination2_0.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Touch somewhere at {rainforest} and see what happens.",
+                    "image_path": "story_img_855298/scene_5_destination2_1.png",
+                    "interaction": "touch",
+                    "interact_image": []
+                },
+                {
+                    "character": "{squirrel}",
+                    "prompt": "React to the user's excitement. Suggest user to find an item at {rainforest}.",
+                    "image_path": "story_img_855298/scene_5_destination2_2.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Find each item at {rainforest} and say out each item's name.",
+                    "image_path": "story_img_855298/scene_5_destination2_3.png",
+                    "interaction": "click",
+                    "interact_image": [
+                        "story_img_855298/scene_5_destination2_3_{ribbon}.png",
+                        "story_img_855298/scene_5_destination2_3_{rose}.png",
+                        "story_img_855298/scene_5_destination2_3_{rain}.png"
+                    ]
+                },
+                {
+                    "character": "{squirrel}",
+                    "prompt": "Appraise the user's performance.",
+                    "image_path": "story_img_855298/scene_5_destination2_4.png"
+                }
+            ],
+            "next_scenes": [
+                "scene_6_destination2"
+            ]
+        },
+        {
+            "id": "scene_6_destination1",
+            "description": "They wrap up the journey.",
+            "characters": [
+                "{squirrel}"
+            ],
+            "location": [
+                "{seaside}"
+            ],
+            "target_words": [],
+            "dialogue_templates": [
+                {
+                    "character": "{squirrel}",
+                    "prompt": "Ask the user to retrieve the whole journey.",
+                    "image_path": "story_img_855298/scene_6_destination1_0.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Talk about the journey with {squirrel} using today's words.",
+                    "image_path": "story_img_855298/scene_6_destination1_1.png"
+                },
+                {
+                    "character": "{squirrel}",
+                    "prompt": "Complement to the user. Say goodbye to the user.",
+                    "image_path": "story_img_855298/scene_6_destination1_2.png"
+                }
+            ],
+            "next_scenes": [],
+            "props": [
+                "{shell}",
+                "{sand}",
+                "{seal}"
+            ]
+        },
+        {
+            "id": "scene_6_destination2",
+            "description": "They wrap up the journey.",
+            "characters": [
+                "{squirrel}"
+            ],
+            "location": [
+                "{rainforest}"
+            ],
+            "target_words": [],
+            "dialogue_templates": [
+                {
+                    "character": "{squirrel}",
+                    "prompt": "Ask the user to retrieve the whole journey.",
+                    "image_path": "story_img_855298/scene_6_destination2_0.png"
+                },
+                {
+                    "character": "{user}",
+                    "prompt": "Talk about the journey with {squirrel} using today's words.",
+                    "image_path": "story_img_855298/scene_6_destination2_1.png"
+                },
+                {
+                    "character": "{squirrel}",
+                    "prompt": "Complement to the user. Say goodbye to the user.",
+                    "image_path": "story_img_855298/scene_6_destination2_2.png"
+                }
+            ],
+            "next_scenes": [],
+            "props": [
+                "{rain}",
+                "{rose}",
+                "{ribbon}"
+            ]
+        }
+    ]
+}
