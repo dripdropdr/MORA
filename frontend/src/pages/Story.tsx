@@ -140,7 +140,9 @@ function StoryInner() {
     
     // Word mode: 빈칸 채우기 로직
     if (storyMode === 'word' && wordsInDialogue.length > 0) {
-      const matched = wordsInDialogue.find(w => w.replace(/[{}]/g, '').toLowerCase() === input.toLowerCase());
+      // 입력과 단어에서 마침표/쉼표 등 기호를 제거하고 비교하도록 정규화
+      const normalize = (s: string) => s.replace(/[{}.,!?;:"'()[\]\/\\]/g, '').toLowerCase().trim();
+      const matched = wordsInDialogue.find(w => normalize(w) === normalize(input));
       
       if (matched) {
         // 단어 맞음: 빈칸 채우기
